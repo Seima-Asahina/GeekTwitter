@@ -1,0 +1,40 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}TOPページ{% endblock %}
+
+{% block content %}
+<header>
+    <div class="header">
+        <h1>GeekTwitter</h1>
+    </div>
+</header>
+<div class="search">
+    <form>
+        <input type="text" name="search">
+        <input type="submit" value="検索">
+    </form>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+        <h1>記事一覧</h1>
+        <a href="/create" role="button">新規作成画面</a>
+        <a href="/logout" role="button">ログアウト</a>
+        </div>
+        {% for post in posts %}
+        <div class="text-center">
+            <div class="rounded-lg">
+                <div class="bg-primary text-white p-3">
+                    <article>
+                        <h2>{{post.title}}</h2>
+                        <a href="/{{post.id}}/update" role="button">編集</a>
+                        <a href="/{{post.id}}/delete" role="button">削除</a>
+                        <p>作成日時：{{post.created_at}}</p>
+                        <p>{{post.body}}</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+{% endfor %}
+    </div>
+</div>
+{% endblock %}
