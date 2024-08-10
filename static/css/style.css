@@ -1,5 +1,44 @@
 header {
-    background-color: blue;
+    background-color:#b0c4de ;
     padding: 20px;
     text-align: center;
-  }
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav{
+  margin: 0 0 0 auto;
+}
+
+#login-header{
+    background-color:#b0c4de ;
+    padding: 20px;
+    text-align:start;
+
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: start;
+}
+
+.rounded{
+  background-color: #b0c4de;
+  border: radius 10px;
+}
+
+a {
+  margin-right: 5%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+  background-color:#b0c4de;
+  font-size: 15px;
+  color: #000000;
+}

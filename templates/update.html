@@ -1,6 +1,20 @@
-{% extends "bootstrap/base.html" %}
-{% block title %}編集ページ{% endblock %}
-<h1>編集画面</h1>
+{% extends "base.html" %}
+{% block content %}
+<header id="login-header">
+    <h1 class="fw-bolder">GeekTwitter</h1>
+</header>
+<div class="container">
+    <div class="row gy-5">
+        <div class="col">
+           <h2></h2>
+        </div>
+        <div class="col">
+            <h1 class="p-4">編集する</h1>
+        </div>
+        <div class="col">
+            <h2></h2>
+        </div>
+    </div>
 <form method="POST">
     <label for="'title">タイトル</label>
     <input type="text" name="title" value="{{ post.title }}">
